@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+
+<head> 
+    <title>Record</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="roster.html">Roster</a></li> 
+            <li><a href="record.html">Record</a></li> <!-- Analytics page-->
+            <li><a href="merchandise.html">Merchandise</a></li> <!-- CRUD page-->
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="https://github.com/sidpatel87">Github</a></li>
+        </ul>
+    </nav>
+    
+
+    <h1>Philadelphia Eagles Season Record</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Season</th>
+                <th>Wins</th>
+                <th>Losses</th>
+                <th>Ties</th>
+                <th>Win Percentage</th>
+                <th>Playoff Appearance</th>
+                <th>Super Bowl Appearance</th>
+                <th>Super Bowl Wins</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2018</td>
+                <td>9</td>
+                <td>7</td>
+                <td>0</td>
+                <td>.563</td>
+                <td>Yes</td>
+                <td>Yes (LII)</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>2019</td>
+                <td>9</td>
+                <td>7</td>
+                <td>0</td>
+                <td>.563</td>
+                <td>No</td>
+                <td>No</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>2020</td>
+                <td>4</td>
+                <td>11</td>
+                <td>1</td>
+                <td>.281</td>
+                <td>No</td>
+                <td>No</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>2021</td>
+                <td>9</td>
+                <td>8</td>
+                <td>0</td>
+                <td>.529</td>
+                <td>Yes</td>
+                <td>No</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>2022</td>
+                <td>14</td>
+                <td>3</td>
+                <td>0</td>
+                <td>.824</td>
+                <td>Yes</td>
+                <td>No (NFC Championship)</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>2023</td>
+                <td>11</td>
+                <td>6</td>
+                <td>0</td>
+                <td>.647</td>
+                <td>Yes</td>
+                <td>No</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>2024</td>
+                <td>14</td>
+                <td>3</td>
+                <td>0</td>
+                <td>.824</td>
+                <td>Yes</td>
+                <td>Yes (LIX)</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>2025</td>
+                <td>4</td>
+                <td>2</td>
+                <td>0</td>
+                <td>.667</td>
+                <td>Pending</td>
+                <td>Pending</td>
+                <td>Pending</td>
+            </tr>
+    </table>
+
+    <div style="text-align: left; margin: 20px;">
+        <button onclick="displayWinChart()">Show Regular Season Wins (2018-2025)</button>
+    </div>
+
+<div> 
+    <canvas id="winschart"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    // Create the function that the button will call
+    function displayWinChart() {
+        const ctx = document.getElementById('winschart').getContext('2d');
+
+        // Your chart code is now inside the function
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+              labels: ['2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025'],
+              datasets: [{
+                label: 'Season Wins',
+                data: [9, 9, 4, 9, 14, 11, 14, 4],
+                backgroundColor: 'rgba(0, 76, 84, 0.8)', 
+                borderWidth: 1
+              }]
+            },
+            options: {
+              scales: {
+                y: {
+                  beginAtZero: true,
+                  max: 17 
+                }
+              }
+            }
+        });
+    }
+</script>
+

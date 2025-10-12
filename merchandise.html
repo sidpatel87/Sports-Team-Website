@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+
+<head> 
+    <title>Merchandise</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="roster.html">Roster</a></li> 
+            <li><a href="record.html">Record</a></li> <!-- Analytics page-->
+            <li><a href="merchandise.html">Merchandise</a></li> <!-- CRUD page-->
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="https://github.com/sidpatel87">Github</a></li>
+        </ul>
+    </nav>
+   
+
+    <h1>Merchandise</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Jersey</th>
+                <th>T-shirt</th>
+                <th>Football</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Price: $120</td>
+                <td>Price: $30</td>
+                <td>Price: $50</td>
+            </tr>
+            <tr>
+                <p> <td>Official team jersey with player name and number.</td> </p>
+                <p> <td>Comfortable cotton t-shirt with team logo.</td> </p>
+                <td>Official NFL football with team branding.</td>
+            </tr>
+            <tr>
+                <td><img src="img/jersey.avif" alt="Jersey" width="200" height="200"> </td>
+                <td><img src="img/tshirt.avif" alt="T-shirt" width="200" height="200"></td>
+                <td><img src="img/football.webp" alt="Football" width="200" height="200"></td>
+            </tr>
+            <!-- <tr>
+                <td><button type="button" onclick="alert('Jersey added to cart!')">Add to Cart</button></td>
+                <td><button type="button" onclick="alert('T-shirt added to cart!')">Add to Cart</button></td>
+                <td><button type="button" onclick="alert('Football added to cart!')">Add to Cart</button></td>
+            </tr> !-->
+
+        </tbody>
+    </table>
+
+    
+    <br><br>
+    <fieldset>
+    <h3>Order Management</h3>
+    <form id="orderForm">
+        <label for="item">Select Item:</label>
+        <select id="item" name="item">
+            <option value="jersey">Jersey - $120</option>
+            <option value="tshirt">T-shirt - $30</option>
+            <option value="football">Football - $50</option>
+        </select><br><br>
+    
+        <label for="size">Select Size:</label>
+        <select id="size" name="size">
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+            <option value="xlarge">X-Large</option>
+        </select><br><br>
+    
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" value="1"><br><br>
+    
+        <button type="button" onclick="addToCart()">Add to Cart</button>
+        <button type="button" onclick="viewCart()">View Cart</button>
+        <button type="button" onclick="alert('cart cleared')"">Clear Cart</button>
+    </form>
+    </fieldset>
+    <br><br>
+
+      
+    <!-- update order or cancel order-->
+
+    <fieldset>
+        <h3>Read, Update & Delete: Manage Existing Order</h3>
+        <form>
+            <label for="orderId">Search by Order ID:</label>
+            <input type="text" id="orderId" name="orderId" >
+            <button type="button" onclick="alert('Order found')">Find Order</button>
+            <br><br>
+            
+            <!-- This part the result of a search -->
+            <div>
+                <p><strong>Showing Order # :</strong></p>
+                <p>Item: , Size: , Quantity: 1, Customer: </p>
+                
+                <!-- Update and Delete Buttons -->
+                <button type="button" onclick="alert('order updated!')">Update Order</button>
+                <button type="button" onclick="alert('order cancelled!')">Cancel Order</button>
+            </div>
+        </form>
+    </fieldset>
+
+    <br><br>
+
+</body>
+</html>
+
+
+
+
+
+
+
