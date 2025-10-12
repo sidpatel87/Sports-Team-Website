@@ -1,0 +1,129 @@
+/* --- Body and Page Layout --- */
+body {
+    font-family: Arial, sans-serif; 
+    margin: 0;
+    padding: 0;
+    background-color: #eff5f1; 
+    color: #0f0e0e; 
+  }
+
+/* --- Main Content Container --- */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto; 
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+h1 {
+    text-align: center;
+    color: #004C54;
+  }
+
+h2 {
+    text-align: center;
+    color: #004C54;
+  }
+
+/* --- Navigation Bar --- */
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  background-color: #004C54; /* Dark green background */
+  padding: 15px 0;
+  margin: 0;
+}
+
+nav li {
+  margin: 0 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white; /* White links for contrast */
+  font-weight: bold;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #A5ACAF; /* Eagles silver on hover */
+}
+
+
+
+.stadium-image {
+    width: 100%;
+    height: 800px;
+    display: block; 
+    border-radius: 8px;
+  }
+
+/*Table -  Selects the table, header cells, and data cells */
+table, th, td {
+    border: 1px solid black; /* Adds a 1-pixel solid black border */
+    border-collapse: collapse; /* Merges borders into a single line */
+  }
+  
+  /* Adds some space inside the cells for better readability */
+  th, td {
+    padding: 10px;
+    text-align: center; /* Centers the content within each cell */
+  }
+  
+  /* Optional: Sets the table width and centers it on the page */
+  table {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  fieldset {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+  }
+
+  button {
+    /* Sizing and Spacing */
+    padding: 12px 24px; /* Makes the button bigger (12px top/bottom, 24px left/right) */
+    font-size: 16px; /* Increases text size */
+    
+    /* Colors and Appearance */
+    background-color: #004C54; 
+    color: white; 
+    border: none; /* Removes the default browser border */
+    border-radius: 8px; /* Adds rounded corners */
+    font-weight: bold; /* Makes the text easier to read */
+    
+    /* Interactivity */
+    cursor: pointer; /* Changes the cursor to a hand pointer on hover */
+    transition: background-color 0.3s ease; /* Adds a smooth transition effect */
+  }
+  
+  /* Style for when you hover over the button */
+  button:hover {
+    background-color: #01110fe6; /* A slightly darker green for feedback */
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    font-size: larger;
+    display: block;
+    padding: 25px;
+  }
